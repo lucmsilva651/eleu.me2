@@ -14,3 +14,7 @@ a {
 .sidenav {
   width: 250px;
 }
+
+.small-spacing p {
+  margin: 1.5px 0;
+}
