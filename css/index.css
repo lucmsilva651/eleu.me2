@@ -18,3 +18,8 @@ a {
 .small-spacing p {
   margin: 1.5px 0;
 }
+
+i {
+  margin: 0;
+  padding-right: 5px;
+}
