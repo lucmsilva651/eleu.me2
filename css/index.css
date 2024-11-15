@@ -7,6 +7,10 @@ a {
   color: inherit;
 }
 
+#home {
+  margin-top: -5px;
+}
+
 .brand-logo {
   font-size: 1.5rem;
 }
