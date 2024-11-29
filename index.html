@@ -24,6 +24,7 @@
           <li><a href="#projects">My projects</a></li>
           <li><a href="#social">Social media</a></li>
           <li><a href="#donate">Donate</a></li>
+          <li><a href="#last-fm">Last.fm Status</a></li>
         </ul>
       </div>
     </nav>
@@ -33,6 +34,7 @@
     <li><a href="#projects">My projects</a></li>
     <li><a href="#social">Social media</a></li>
     <li><a href="#donate">Donate</a></li>
+    <li><a href="#last-fm">Last.fm Status</a></li>
   </ul>
   <section id="home" class="section scrollspy purple darken-2 white-text">
     <div class="container">
@@ -192,7 +194,7 @@
             </blockquote>
           </details>
           <details>
-            <summary>Cryptocurrency</summary>
+            <summary>Cryptocurrency (BTC, ETH, etc.)</summary>
             <blockquote>
               <code>
                 Note: You should only send to the specific address of your coin<br>
@@ -221,14 +223,68 @@
       <p>Anyway, these donations are only to support me. You don't necessarily have to donate, and no one should be obligated to do so.</p>
     </div>
   </section>
-  <footer class="page-footer purple darken-2">
+  <section id="last-fm" class="section scrollspy purple darken-2 white-text hide-on-down">
+    <div class="container">
+      <h3>Last.fm Status</h3>
+      <div id="lastNoApi">
+        <p>No Last.fm API key found. To know what I am listening to, please use the DevTools console and insert your API key:</p>
+        <code>apiKey = "yourLastFmApiKey"</code>
+        <p>Then wait a few seconds for a new API hit.</p>
+        <a class="blue-text" href="https://www.last.fm/api/account/create">Click here to generate your own API key.</a><br>
+        <p class="blue-text" onclick="checkApiKeyAndLog();">Refresh manually</a><br><br>
+      </div>
+      <div class="row" id="lastStatus">
+        <div class="col s12 m4">
+          <div class="card hoverable black-text">
+            <div class="card-image">
+              <img src="https://lastfm.freetls.fastly.net/i/u/4128a6eb29f94943c9d206c08e625904.jpg" alt="Album Art" id="albumArt">
+            </div>
+            <div class="card-content">
+              <a id="albumArtDesc">Loading album art...</a><br>
+              <a class="black-text" onclick="fetchNowPlaying();">Refresh manually</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m8">
+          <div class="card hoverable black-text">
+            <div class="card-content">
+              <p class="card-title">Song information<span class="material-icons right">music_note</span></p>
+              <p>Song name: <span id="trackTitle">Loading...</span></p>
+              <p>Last.fm URL: <a id="trackLink">Loading...</a></p>
+              <p>MusicBrainz MBID: <span id="trackMbid">Loading...</span></p>
+            </div>
+          </div>
+          <div class="card hoverable black-text">
+            <div class="card-content">
+              <p class="card-title">Artist information<span class="material-icons right">person</span></p>
+              <p>Artist name: <span id="artistName">Loading...</span></p>
+              <p>MusicBrainz MBID: <span id="artistMbid">Loading...</span></p>
+            </div>
+          </div>
+          <div class="card hoverable black-text">
+            <div class="card-content">
+              <p class="card-title">Album information<span class="material-icons right">album</span></p>
+              <p>Album name: <span id="albumName">Loading...</span></p>
+              <p>MusicBrainz MBID: <span id="albumMbid">Loading...</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="page-footer white black-text">
     <div class="container">
       <div class="center">
-        <p>&copy; 2024 <a href="https://github.com/lucmsilva651" target="_blank" rel="noopener noreferrer">Lucas Gabriel (lucmsilva)</a>. Made with help of the <a href="https://materializecss.com/" target="_blank" rel="noopener noreferrer">Materialize</a> framework.</p><br>
+        <div class="small-spacing">
+          <p>&copy; 2024 <a href="https://github.com/lucmsilva651" target="_blank" rel="noopener noreferrer">Lucas Gabriel (lucmsilva)</a>. Made with help of the <a href="https://materializecss.com/" target="_blank" rel="noopener noreferrer">Materialize</a> framework.</p>
+          <a href="https://github.com/lucmsilva651/eleu.me/tree/materialize" target="_blank" rel="noopener noreferrer">Source code on GitHub</a>
+        </div>
+        <br>
       </div>
     </div>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="/javascript/index.js"></script>
+  <script src="/javascript/lastfm.js"></script>
 </body>
 </html>
