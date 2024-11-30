@@ -1,4 +1,5 @@
-var apiKey = null;
+const apiKey = localStorage.getItem("apiKey");
+console.log("reading from localStorage...");
 const username = "lucmsilva";
 
 async function fetchNowPlaying() {
@@ -27,6 +28,7 @@ async function fetchNowPlaying() {
         document.getElementById('trackLink').href = `${track.url}`;
         document.getElementById('trackLink').classList.add("blue-text");
       } else {
+        document.getElementById('trackLink').classList.add("black-text");
         document.getElementById('trackLink').innerText = "Unknown (N/A)";
       }
       if (track.album["#text"]) {
@@ -62,6 +64,7 @@ async function fetchNowPlaying() {
       document.getElementById('trackTitle').innerText = "None";
       document.getElementById('artistName').innerText = "None";
       document.getElementById('albumName').innerText = "None";
+      document.getElementById('trackLink').classList.add("black-text");
       document.getElementById('trackLink').innerText = "None";
       document.getElementById('trackMbid').innerText = "None";
       document.getElementById('artistMbid').innerText = "None";
@@ -76,8 +79,19 @@ async function fetchNowPlaying() {
   }
 }
 
+function clearStorage() {
+  localStorage.clear();
+  alert("You have removed your API key from this website.\nlocalStorage cleared.");
+  location.reload();
+}
+
+function saveToStorage() {
+  localStorage.setItem("apiKey", document.getElementById("apiKeyInput").value);
+  location.reload();
+}
+
 function checkApiKeyAndLog() {
-  console.log("checking if the api key is inserted")
+  console.log("checking if the api key is inserted");
   if (apiKey || apiKey != null) {
     fetchNowPlaying();
     document.getElementById('lastNoApi').style.display = "none";
@@ -88,4 +102,4 @@ function checkApiKeyAndLog() {
   }
 }
 
-setTimeout(checkApiKeyAndLog(), 5000);
+checkApiKeyAndLog();

@@ -227,11 +227,26 @@
     <div class="container">
       <h3>Last.fm Status</h3>
       <div id="lastNoApi">
-        <p>No Last.fm API key found. To know what I am listening to, please use the DevTools console and insert your API key:</p>
-        <code>apiKey = "yourLastFmApiKey"</code>
-        <p>Then wait a few seconds for a new API hit.</p>
-        <a class="blue-text" href="https://www.last.fm/api/account/create">Click here to generate your own API key.</a><br>
-        <p class="blue-text" onclick="checkApiKeyAndLog();">Refresh manually</a><br><br>
+        <div class="card hoverable black-text">
+          <div class="card-content">
+            <div class="card-title">No API key found<span class="material-icons right">error</span></div>
+            <p>No Last.fm API key found. To know what I am listening to, please insert your Last.fm API key on the field below.</p>
+            <p>No data is collected.</p>
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="apiKeyInput" type="password" class="validate">
+                    <label for="apiKeyInput">Insert your API key here</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <a class="blue-text" href="https://www.last.fm/api/account/create">Click here to generate your own API key from Last.fm.</a><br>
+            <p class="blue-text" onclick="saveToStorage();">Save key and show stats</a>
+          </div>
+        </div>
+        <br>
       </div>
       <div class="row" id="lastStatus">
         <div class="col s12 m4">
@@ -240,8 +255,11 @@
               <img src="https://lastfm.freetls.fastly.net/i/u/4128a6eb29f94943c9d206c08e625904.jpg" alt="Album Art" id="albumArt">
             </div>
             <div class="card-content">
-              <a id="albumArtDesc">Loading album art...</a><br>
-              <a class="black-text" onclick="fetchNowPlaying();">Refresh manually</a>
+              <div class="small-spacing">
+                <a id="albumArtDesc">Loading album art...</a><br>
+                <a class="black-text" onclick="fetchNowPlaying();">Refresh stats</a><span> |</span>
+                <a class="black-text" onclick="clearStorage();">Log out</a>
+              </div>
             </div>
           </div>
         </div>
