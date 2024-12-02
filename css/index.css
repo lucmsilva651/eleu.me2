@@ -32,3 +32,17 @@ i {
 .icon-m {
   padding-right: 10px;
 }
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item a {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item i {
+  margin-right: 8px;
+}
