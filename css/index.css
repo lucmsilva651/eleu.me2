@@ -46,3 +46,11 @@ i {
 .nav-item i {
   margin-right: 8px;
 }
+
+.h3-icon {
+  margin-right: 4px;
+}
+
+.underline {
+  text-decoration: underline;
+}
