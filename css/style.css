@@ -14,8 +14,12 @@ main {
 }
 
 footer {
-  text-align: center;
   border-top: solid 1px #3d444d;
+}
+
+footer,
+footer a {
+  font-size: small;
 }
 
 main,
@@ -61,6 +65,7 @@ a:hover {
 }
 
 @media (min-width: 800px) {
+
   main,
   header,
   footer {
@@ -70,6 +75,7 @@ a:hover {
 }
 
 @media (min-width: 1000px) {
+
   main,
   header,
   footer {
