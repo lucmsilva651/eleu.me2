@@ -43,7 +43,8 @@ a:hover {
   filter: invert(63%) sepia(8%) saturate(358%) hue-rotate(174deg) brightness(96%) contrast(80%);
 }
 
-.small-spacing {
+.bottom-padding,
+.tab-content {
   padding-bottom: 25px;
 }
 
