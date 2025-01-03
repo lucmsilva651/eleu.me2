@@ -1,15 +1,13 @@
 # eleu.me
+The code for my website.
 
-To install dependencies:
+# Build HTML/CSS/JS
+1. Install with Bun
+   ```
+   bun install
+   ```
 
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.js
-```
-
-This project was created using `bun init` in bun v1.1.38. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+2. Build
+   ```
+   bun run build
+   ```
