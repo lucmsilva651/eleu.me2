@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "minify:css": "cleancss -o public/css/header.min.css src/css/header.css && cleancss -o public/css/style.min.css src/css/style.css",
-    "minify:js": "terser src/js/typed.js -o public/js/typed.min.js && terser src/js/components.js -o public/js/components.min.js && terser src/js/index.js -o public/js/index.min.js && terser src/js/zeromd.js -o public/js/zeromd.min.js",
+    "minify:js": "terser src/javascripttyped.js -o public/js/typed.min.js && terser src/javascriptcomponents.js -o public/js/components.min.js && terser src/javascriptindex.js -o public/js/index.min.js && terser src/javascriptzeromd.js -o public/js/zeromd.min.js",
     "minify:html": "html-minifier --input-dir src --output-dir public --file-ext html --collapse-whitespace --remove-comments --minify-css true --minify-js true",
     "build": "bun run minify:css && bun run minify:js && bun run minify:html"
   },
