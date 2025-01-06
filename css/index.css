@@ -1,0 +1,78 @@
+body,
+button,
+input,
+form,
+.dropdown-content a,
+.markdown-body p {
+  font-family: "Barlow", sans-serif;
+  color: #f0f6fc !important;
+}
+
+section,
+.dropdown-content {
+  background-color: #0d1117;
+}
+
+section {
+  margin: -10px 0;
+}
+
+a {
+  color: inherit;
+}
+
+h3 {
+  padding: 0 0 16px;
+}
+
+.card,
+.collection-item,
+.dropdown-content a:hover,
+.dropdown-content li:hover {
+  background-color: #151b23 !important;
+}
+
+blockquote {
+  border-left: 5px solid #3d444d !important;
+}
+
+.light-section {
+  background-color: #181f29 !important;
+}
+
+.sidenav {
+  width: 250px;
+  padding-top: 15px;
+}
+
+.small-spacing p {
+  margin: 1.5px 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.brand-logo {
+  font-size: 1.5rem;
+}
+
+.sidenav {
+  width: 250px;
+  padding-top: 15px;
+}
+
+i {
+  margin: 0;
+  padding-right: 5px;
+}
+
+@media (min-width: 600px) {
+  .left-side.col {
+    padding: 0 10px 0 0;
+  }
+
+  .right-side.col {
+    padding: 0 0 0 10px;
+  }
+}
