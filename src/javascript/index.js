@@ -1,6 +1,6 @@
-import { loadComponents } from './components.js';
-import { loadTyped } from './typed.js';
-import { loadZeroMd } from './zeromd.js';
+import { loadComponents } from './components.min.js';
+import { loadTyped } from './typed.min.js';
+import { loadZeroMd } from './zeromd.min.js';
 
 loadZeroMd();
 loadComponents();
